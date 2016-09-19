@@ -9,10 +9,35 @@
 /* Begin PBXBuildFile section */
 		170E105E1D90287500F85EED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E105D1D90287500F85EED /* main.m */; };
 		170E10611D90287500F85EED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10601D90287500F85EED /* AppDelegate.m */; };
-		170E10641D90287500F85EED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10631D90287500F85EED /* ViewController.m */; };
 		170E10671D90287500F85EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170E10651D90287500F85EED /* Main.storyboard */; };
 		170E10691D90287500F85EED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170E10681D90287500F85EED /* Assets.xcassets */; };
 		170E106C1D90287500F85EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170E106A1D90287500F85EED /* LaunchScreen.storyboard */; };
+		170E10A91D9029AB00F85EED /* BlendMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10741D9029AB00F85EED /* BlendMode.m */; };
+		170E10AA1D9029AB00F85EED /* BlendModeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10761D9029AB00F85EED /* BlendModeTableViewController.m */; };
+		170E10AB1D9029AB00F85EED /* Brush.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10781D9029AB00F85EED /* Brush.m */; };
+		170E10AC1D9029AB00F85EED /* BrushSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E107A1D9029AB00F85EED /* BrushSlider.m */; };
+		170E10AD1D9029AB00F85EED /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E107C1D9029AB00F85EED /* Canvas.m */; };
+		170E10AE1D9029AB00F85EED /* CanvasDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E107E1D9029AB00F85EED /* CanvasDao.m */; };
+		170E10AF1D9029AB00F85EED /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10801D9029AB00F85EED /* CanvasView.m */; };
+		170E10B01D9029AB00F85EED /* CircleColcorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10821D9029AB00F85EED /* CircleColcorPicker.m */; };
+		170E10B11D9029AB00F85EED /* constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10841D9029AB00F85EED /* constants.m */; };
+		170E10B21D9029AB00F85EED /* DrawingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10861D9029AB00F85EED /* DrawingLayer.m */; };
+		170E10B41D9029AB00F85EED /* FGTHSBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E108A1D9029AB00F85EED /* FGTHSBSupport.m */; };
+		170E10B51D9029AB00F85EED /* FigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E108C1D9029AB00F85EED /* FigureView.m */; };
+		170E10B61D9029AB00F85EED /* InfColorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E108E1D9029AB00F85EED /* InfColorIndicatorView.m */; };
+		170E10B71D9029AB00F85EED /* LayerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10901D9029AB00F85EED /* LayerControl.m */; };
+		170E10B81D9029AB00F85EED /* LayerEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10921D9029AB00F85EED /* LayerEditView.m */; };
+		170E10B91D9029AB00F85EED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10941D9029AB00F85EED /* MainViewController.m */; };
+		170E10BA1D9029AB00F85EED /* Oval.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10961D9029AB00F85EED /* Oval.m */; };
+		170E10BB1D9029AB00F85EED /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10981D9029AB00F85EED /* PaletteViewController.m */; };
+		170E10BC1D9029AB00F85EED /* SquareColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E109A1D9029AB00F85EED /* SquareColorPicker.m */; };
+		170E10BD1D9029AB00F85EED /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E109C1D9029AB00F85EED /* Stroke.m */; };
+		170E10BE1D9029AB00F85EED /* UIBezierPath+Brush.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E109E1D9029AB00F85EED /* UIBezierPath+Brush.m */; };
+		170E10BF1D9029AB00F85EED /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A01D9029AB00F85EED /* UIColor+BFPaperColors.m */; };
+		170E10C01D9029AB00F85EED /* UIColor+FGTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A21D9029AB00F85EED /* UIColor+FGTColor.m */; };
+		170E10C11D9029AB00F85EED /* UIImage+FEBoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A41D9029AB00F85EED /* UIImage+FEBoxBlur.m */; };
+		170E10C21D9029AB00F85EED /* UIImage+FGTDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */; };
+		170E10C31D9029AB00F85EED /* UIView+FGTDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +45,62 @@
 		170E105D1D90287500F85EED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		170E105F1D90287500F85EED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		170E10601D90287500F85EED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		170E10621D90287500F85EED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		170E10631D90287500F85EED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		170E10661D90287500F85EED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		170E10681D90287500F85EED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		170E106B1D90287500F85EED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		170E106D1D90287500F85EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170E10731D9029AB00F85EED /* BlendMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendMode.h; sourceTree = "<group>"; };
+		170E10741D9029AB00F85EED /* BlendMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlendMode.m; sourceTree = "<group>"; };
+		170E10751D9029AB00F85EED /* BlendModeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendModeTableViewController.h; sourceTree = "<group>"; };
+		170E10761D9029AB00F85EED /* BlendModeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlendModeTableViewController.m; sourceTree = "<group>"; };
+		170E10771D9029AB00F85EED /* Brush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brush.h; sourceTree = "<group>"; };
+		170E10781D9029AB00F85EED /* Brush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brush.m; sourceTree = "<group>"; };
+		170E10791D9029AB00F85EED /* BrushSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrushSlider.h; sourceTree = "<group>"; };
+		170E107A1D9029AB00F85EED /* BrushSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrushSlider.m; sourceTree = "<group>"; };
+		170E107B1D9029AB00F85EED /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
+		170E107C1D9029AB00F85EED /* Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Canvas.m; sourceTree = "<group>"; };
+		170E107D1D9029AB00F85EED /* CanvasDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasDao.h; sourceTree = "<group>"; };
+		170E107E1D9029AB00F85EED /* CanvasDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasDao.m; sourceTree = "<group>"; };
+		170E107F1D9029AB00F85EED /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		170E10801D9029AB00F85EED /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		170E10811D9029AB00F85EED /* CircleColcorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleColcorPicker.h; sourceTree = "<group>"; };
+		170E10821D9029AB00F85EED /* CircleColcorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleColcorPicker.m; sourceTree = "<group>"; };
+		170E10831D9029AB00F85EED /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		170E10841D9029AB00F85EED /* constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = constants.m; sourceTree = "<group>"; };
+		170E10851D9029AB00F85EED /* DrawingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingLayer.h; sourceTree = "<group>"; };
+		170E10861D9029AB00F85EED /* DrawingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingLayer.m; sourceTree = "<group>"; };
+		170E10891D9029AB00F85EED /* FGTHSBSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGTHSBSupport.h; sourceTree = "<group>"; };
+		170E108A1D9029AB00F85EED /* FGTHSBSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGTHSBSupport.m; sourceTree = "<group>"; };
+		170E108B1D9029AB00F85EED /* FigureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FigureView.h; sourceTree = "<group>"; };
+		170E108C1D9029AB00F85EED /* FigureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FigureView.m; sourceTree = "<group>"; };
+		170E108D1D9029AB00F85EED /* InfColorIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfColorIndicatorView.h; sourceTree = "<group>"; };
+		170E108E1D9029AB00F85EED /* InfColorIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfColorIndicatorView.m; sourceTree = "<group>"; };
+		170E108F1D9029AB00F85EED /* LayerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerControl.h; sourceTree = "<group>"; };
+		170E10901D9029AB00F85EED /* LayerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerControl.m; sourceTree = "<group>"; };
+		170E10911D9029AB00F85EED /* LayerEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerEditView.h; sourceTree = "<group>"; };
+		170E10921D9029AB00F85EED /* LayerEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerEditView.m; sourceTree = "<group>"; };
+		170E10931D9029AB00F85EED /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		170E10941D9029AB00F85EED /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		170E10951D9029AB00F85EED /* Oval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oval.h; sourceTree = "<group>"; };
+		170E10961D9029AB00F85EED /* Oval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oval.m; sourceTree = "<group>"; };
+		170E10971D9029AB00F85EED /* PaletteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
+		170E10981D9029AB00F85EED /* PaletteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
+		170E10991D9029AB00F85EED /* SquareColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareColorPicker.h; sourceTree = "<group>"; };
+		170E109A1D9029AB00F85EED /* SquareColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareColorPicker.m; sourceTree = "<group>"; };
+		170E109B1D9029AB00F85EED /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
+		170E109C1D9029AB00F85EED /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
+		170E109D1D9029AB00F85EED /* UIBezierPath+Brush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Brush.h"; sourceTree = "<group>"; };
+		170E109E1D9029AB00F85EED /* UIBezierPath+Brush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Brush.m"; sourceTree = "<group>"; };
+		170E109F1D9029AB00F85EED /* UIColor+BFPaperColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BFPaperColors.h"; sourceTree = "<group>"; };
+		170E10A01D9029AB00F85EED /* UIColor+BFPaperColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BFPaperColors.m"; sourceTree = "<group>"; };
+		170E10A11D9029AB00F85EED /* UIColor+FGTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FGTColor.h"; sourceTree = "<group>"; };
+		170E10A21D9029AB00F85EED /* UIColor+FGTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FGTColor.m"; sourceTree = "<group>"; };
+		170E10A31D9029AB00F85EED /* UIImage+FEBoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FEBoxBlur.h"; sourceTree = "<group>"; };
+		170E10A41D9029AB00F85EED /* UIImage+FEBoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FEBoxBlur.m"; sourceTree = "<group>"; };
+		170E10A51D9029AB00F85EED /* UIImage+FGTDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FGTDrawing.h"; sourceTree = "<group>"; };
+		170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FGTDrawing.m"; sourceTree = "<group>"; };
+		170E10A71D9029AB00F85EED /* UIView+FGTDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FGTDrawing.h"; sourceTree = "<group>"; };
+		170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FGTDrawing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +133,32 @@
 		170E105B1D90287500F85EED /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
-				170E105F1D90287500F85EED /* AppDelegate.h */,
-				170E10601D90287500F85EED /* AppDelegate.m */,
-				170E10621D90287500F85EED /* ViewController.h */,
-				170E10631D90287500F85EED /* ViewController.m */,
+				170E10C51D9029DF00F85EED /* View */,
+				170E10C41D9029C500F85EED /* Modal */,
+				170E10751D9029AB00F85EED /* BlendModeTableViewController.h */,
+				170E10761D9029AB00F85EED /* BlendModeTableViewController.m */,
+				170E10831D9029AB00F85EED /* constants.h */,
+				170E10841D9029AB00F85EED /* constants.m */,
+				170E10891D9029AB00F85EED /* FGTHSBSupport.h */,
+				170E108A1D9029AB00F85EED /* FGTHSBSupport.m */,
+				170E10931D9029AB00F85EED /* MainViewController.h */,
+				170E10941D9029AB00F85EED /* MainViewController.m */,
+				170E10971D9029AB00F85EED /* PaletteViewController.h */,
+				170E10981D9029AB00F85EED /* PaletteViewController.m */,
+				170E109D1D9029AB00F85EED /* UIBezierPath+Brush.h */,
+				170E109E1D9029AB00F85EED /* UIBezierPath+Brush.m */,
+				170E109F1D9029AB00F85EED /* UIColor+BFPaperColors.h */,
+				170E10A01D9029AB00F85EED /* UIColor+BFPaperColors.m */,
+				170E10A11D9029AB00F85EED /* UIColor+FGTColor.h */,
+				170E10A21D9029AB00F85EED /* UIColor+FGTColor.m */,
+				170E10A31D9029AB00F85EED /* UIImage+FEBoxBlur.h */,
+				170E10A41D9029AB00F85EED /* UIImage+FEBoxBlur.m */,
+				170E10A51D9029AB00F85EED /* UIImage+FGTDrawing.h */,
+				170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */,
+				170E10A71D9029AB00F85EED /* UIView+FGTDrawing.h */,
+				170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */,
 				170E10651D90287500F85EED /* Main.storyboard */,
 				170E10681D90287500F85EED /* Assets.xcassets */,
-				170E106A1D90287500F85EED /* LaunchScreen.storyboard */,
-				170E106D1D90287500F85EED /* Info.plist */,
 				170E105C1D90287500F85EED /* Supporting Files */,
 			);
 			path = Drawing;
@@ -74,9 +167,57 @@
 		170E105C1D90287500F85EED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				170E106A1D90287500F85EED /* LaunchScreen.storyboard */,
+				170E106D1D90287500F85EED /* Info.plist */,
+				170E105F1D90287500F85EED /* AppDelegate.h */,
+				170E10601D90287500F85EED /* AppDelegate.m */,
 				170E105D1D90287500F85EED /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		170E10C41D9029C500F85EED /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				170E109B1D9029AB00F85EED /* Stroke.h */,
+				170E109C1D9029AB00F85EED /* Stroke.m */,
+				170E10951D9029AB00F85EED /* Oval.h */,
+				170E10961D9029AB00F85EED /* Oval.m */,
+				170E10851D9029AB00F85EED /* DrawingLayer.h */,
+				170E10861D9029AB00F85EED /* DrawingLayer.m */,
+				170E107B1D9029AB00F85EED /* Canvas.h */,
+				170E107C1D9029AB00F85EED /* Canvas.m */,
+				170E107D1D9029AB00F85EED /* CanvasDao.h */,
+				170E107E1D9029AB00F85EED /* CanvasDao.m */,
+				170E10771D9029AB00F85EED /* Brush.h */,
+				170E10781D9029AB00F85EED /* Brush.m */,
+				170E10731D9029AB00F85EED /* BlendMode.h */,
+				170E10741D9029AB00F85EED /* BlendMode.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		170E10C51D9029DF00F85EED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				170E10991D9029AB00F85EED /* SquareColorPicker.h */,
+				170E109A1D9029AB00F85EED /* SquareColorPicker.m */,
+				170E108B1D9029AB00F85EED /* FigureView.h */,
+				170E108C1D9029AB00F85EED /* FigureView.m */,
+				170E108D1D9029AB00F85EED /* InfColorIndicatorView.h */,
+				170E108E1D9029AB00F85EED /* InfColorIndicatorView.m */,
+				170E108F1D9029AB00F85EED /* LayerControl.h */,
+				170E10901D9029AB00F85EED /* LayerControl.m */,
+				170E10911D9029AB00F85EED /* LayerEditView.h */,
+				170E10921D9029AB00F85EED /* LayerEditView.m */,
+				170E10791D9029AB00F85EED /* BrushSlider.h */,
+				170E107A1D9029AB00F85EED /* BrushSlider.m */,
+				170E107F1D9029AB00F85EED /* CanvasView.h */,
+				170E10801D9029AB00F85EED /* CanvasView.m */,
+				170E10811D9029AB00F85EED /* CircleColcorPicker.h */,
+				170E10821D9029AB00F85EED /* CircleColcorPicker.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +292,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170E10641D90287500F85EED /* ViewController.m in Sources */,
+				170E10AB1D9029AB00F85EED /* Brush.m in Sources */,
+				170E10A91D9029AB00F85EED /* BlendMode.m in Sources */,
+				170E10B91D9029AB00F85EED /* MainViewController.m in Sources */,
+				170E10B11D9029AB00F85EED /* constants.m in Sources */,
+				170E10C31D9029AB00F85EED /* UIView+FGTDrawing.m in Sources */,
+				170E10B51D9029AB00F85EED /* FigureView.m in Sources */,
+				170E10BF1D9029AB00F85EED /* UIColor+BFPaperColors.m in Sources */,
 				170E10611D90287500F85EED /* AppDelegate.m in Sources */,
+				170E10BA1D9029AB00F85EED /* Oval.m in Sources */,
+				170E10B41D9029AB00F85EED /* FGTHSBSupport.m in Sources */,
+				170E10BE1D9029AB00F85EED /* UIBezierPath+Brush.m in Sources */,
+				170E10B81D9029AB00F85EED /* LayerEditView.m in Sources */,
+				170E10BC1D9029AB00F85EED /* SquareColorPicker.m in Sources */,
+				170E10BD1D9029AB00F85EED /* Stroke.m in Sources */,
+				170E10C01D9029AB00F85EED /* UIColor+FGTColor.m in Sources */,
+				170E10AF1D9029AB00F85EED /* CanvasView.m in Sources */,
+				170E10B01D9029AB00F85EED /* CircleColcorPicker.m in Sources */,
+				170E10B21D9029AB00F85EED /* DrawingLayer.m in Sources */,
+				170E10C21D9029AB00F85EED /* UIImage+FGTDrawing.m in Sources */,
+				170E10AA1D9029AB00F85EED /* BlendModeTableViewController.m in Sources */,
+				170E10B61D9029AB00F85EED /* InfColorIndicatorView.m in Sources */,
 				170E105E1D90287500F85EED /* main.m in Sources */,
+				170E10BB1D9029AB00F85EED /* PaletteViewController.m in Sources */,
+				170E10B71D9029AB00F85EED /* LayerControl.m in Sources */,
+				170E10AE1D9029AB00F85EED /* CanvasDao.m in Sources */,
+				170E10AC1D9029AB00F85EED /* BrushSlider.m in Sources */,
+				170E10AD1D9029AB00F85EED /* Canvas.m in Sources */,
+				170E10C11D9029AB00F85EED /* UIImage+FEBoxBlur.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +478,7 @@
 				170E10721D90287500F85EED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
