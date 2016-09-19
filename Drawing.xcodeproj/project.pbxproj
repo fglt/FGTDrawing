@@ -38,6 +38,11 @@
 		170E10C11D9029AB00F85EED /* UIImage+FEBoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A41D9029AB00F85EED /* UIImage+FEBoxBlur.m */; };
 		170E10C21D9029AB00F85EED /* UIImage+FGTDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */; };
 		170E10C31D9029AB00F85EED /* UIView+FGTDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */; };
+		170E10C81D902B2300F85EED /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170E10C71D902B2300F85EED /* OpenGLES.framework */; };
+		170E10D21D9030B600F85EED /* fileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10CC1D9030B600F85EED /* fileUtil.m */; };
+		170E10D31D9030B600F85EED /* shaderUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 170E10CD1D9030B600F85EED /* shaderUtil.c */; };
+		170E10D41D9030B600F85EED /* point.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 170E10D01D9030B600F85EED /* point.fsh */; };
+		170E10D51D9030B600F85EED /* point.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 170E10D11D9030B600F85EED /* point.vsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +106,14 @@
 		170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FGTDrawing.m"; sourceTree = "<group>"; };
 		170E10A71D9029AB00F85EED /* UIView+FGTDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FGTDrawing.h"; sourceTree = "<group>"; };
 		170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FGTDrawing.m"; sourceTree = "<group>"; };
+		170E10C71D902B2300F85EED /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		170E10CA1D9030B600F85EED /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		170E10CB1D9030B600F85EED /* fileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileUtil.h; sourceTree = "<group>"; };
+		170E10CC1D9030B600F85EED /* fileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fileUtil.m; sourceTree = "<group>"; };
+		170E10CD1D9030B600F85EED /* shaderUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shaderUtil.c; sourceTree = "<group>"; };
+		170E10CE1D9030B600F85EED /* shaderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shaderUtil.h; sourceTree = "<group>"; };
+		170E10D01D9030B600F85EED /* point.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.fsh; sourceTree = "<group>"; };
+		170E10D11D9030B600F85EED /* point.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.vsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170E10C81D902B2300F85EED /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +133,7 @@
 			children = (
 				170E105B1D90287500F85EED /* Drawing */,
 				170E105A1D90287500F85EED /* Products */,
+				170E10C61D902B2300F85EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,7 +148,10 @@
 		170E105B1D90287500F85EED /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				170E10C91D9030B600F85EED /* Other Sources */,
+				170E10CF1D9030B600F85EED /* Shaders */,
 				170E10C51D9029DF00F85EED /* View */,
+				170E10D61D9030D600F85EED /* categories */,
 				170E10C41D9029C500F85EED /* Modal */,
 				170E10751D9029AB00F85EED /* BlendModeTableViewController.h */,
 				170E10761D9029AB00F85EED /* BlendModeTableViewController.m */,
@@ -145,18 +163,6 @@
 				170E10941D9029AB00F85EED /* MainViewController.m */,
 				170E10971D9029AB00F85EED /* PaletteViewController.h */,
 				170E10981D9029AB00F85EED /* PaletteViewController.m */,
-				170E109D1D9029AB00F85EED /* UIBezierPath+Brush.h */,
-				170E109E1D9029AB00F85EED /* UIBezierPath+Brush.m */,
-				170E109F1D9029AB00F85EED /* UIColor+BFPaperColors.h */,
-				170E10A01D9029AB00F85EED /* UIColor+BFPaperColors.m */,
-				170E10A11D9029AB00F85EED /* UIColor+FGTColor.h */,
-				170E10A21D9029AB00F85EED /* UIColor+FGTColor.m */,
-				170E10A31D9029AB00F85EED /* UIImage+FEBoxBlur.h */,
-				170E10A41D9029AB00F85EED /* UIImage+FEBoxBlur.m */,
-				170E10A51D9029AB00F85EED /* UIImage+FGTDrawing.h */,
-				170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */,
-				170E10A71D9029AB00F85EED /* UIView+FGTDrawing.h */,
-				170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */,
 				170E10651D90287500F85EED /* Main.storyboard */,
 				170E10681D90287500F85EED /* Assets.xcassets */,
 				170E105C1D90287500F85EED /* Supporting Files */,
@@ -220,6 +226,54 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		170E10C61D902B2300F85EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				170E10C71D902B2300F85EED /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		170E10C91D9030B600F85EED /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				170E10CA1D9030B600F85EED /* debug.h */,
+				170E10CB1D9030B600F85EED /* fileUtil.h */,
+				170E10CC1D9030B600F85EED /* fileUtil.m */,
+				170E10CD1D9030B600F85EED /* shaderUtil.c */,
+				170E10CE1D9030B600F85EED /* shaderUtil.h */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		170E10CF1D9030B600F85EED /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				170E10D01D9030B600F85EED /* point.fsh */,
+				170E10D11D9030B600F85EED /* point.vsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		170E10D61D9030D600F85EED /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				170E109D1D9029AB00F85EED /* UIBezierPath+Brush.h */,
+				170E109E1D9029AB00F85EED /* UIBezierPath+Brush.m */,
+				170E109F1D9029AB00F85EED /* UIColor+BFPaperColors.h */,
+				170E10A01D9029AB00F85EED /* UIColor+BFPaperColors.m */,
+				170E10A11D9029AB00F85EED /* UIColor+FGTColor.h */,
+				170E10A21D9029AB00F85EED /* UIColor+FGTColor.m */,
+				170E10A31D9029AB00F85EED /* UIImage+FEBoxBlur.h */,
+				170E10A41D9029AB00F85EED /* UIImage+FEBoxBlur.m */,
+				170E10A51D9029AB00F85EED /* UIImage+FGTDrawing.h */,
+				170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */,
+				170E10A71D9029AB00F85EED /* UIView+FGTDrawing.h */,
+				170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +335,8 @@
 			files = (
 				170E106C1D90287500F85EED /* LaunchScreen.storyboard in Resources */,
 				170E10691D90287500F85EED /* Assets.xcassets in Resources */,
+				170E10D51D9030B600F85EED /* point.vsh in Resources */,
+				170E10D41D9030B600F85EED /* point.fsh in Resources */,
 				170E10671D90287500F85EED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,8 +367,10 @@
 				170E10B01D9029AB00F85EED /* CircleColcorPicker.m in Sources */,
 				170E10B21D9029AB00F85EED /* DrawingLayer.m in Sources */,
 				170E10C21D9029AB00F85EED /* UIImage+FGTDrawing.m in Sources */,
+				170E10D21D9030B600F85EED /* fileUtil.m in Sources */,
 				170E10AA1D9029AB00F85EED /* BlendModeTableViewController.m in Sources */,
 				170E10B61D9029AB00F85EED /* InfColorIndicatorView.m in Sources */,
+				170E10D31D9030B600F85EED /* shaderUtil.c in Sources */,
 				170E105E1D90287500F85EED /* main.m in Sources */,
 				170E10BB1D9029AB00F85EED /* PaletteViewController.m in Sources */,
 				170E10B71D9029AB00F85EED /* LayerControl.m in Sources */,

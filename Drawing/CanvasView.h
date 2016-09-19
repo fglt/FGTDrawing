@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <OpenGLES/EAGL.h>
+#import <OpenGLES/ES3/gl.h>
+#import <OpenGLES/ES3/glext.h>
 @class Canvas;
 @class DrawingLayer;
 
 @interface CanvasView : UIView
-- (void)displayContent;
 @end
