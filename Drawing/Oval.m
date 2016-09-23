@@ -47,11 +47,11 @@
 }
 
 
-- (double)angle:(double) angle
+- (CGFloat)angle:(CGFloat) angle
 {
     
-    double len = angle *[self arcStartAngle:0 endAngle:2*M_PI]/2/M_PI;
-    double a1 =angle, a2;
+    CGFloat len = angle *[self arcStartAngle:0 endAngle:2*M_PI]/2/M_PI;
+    CGFloat a1 =angle, a2;
     
     do
         

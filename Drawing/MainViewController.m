@@ -37,9 +37,11 @@
 @property (weak, nonatomic) IBOutlet UIView *blendModeBoard;
 @property (weak, nonatomic) IBOutlet UIView *backColorViewBoard;
 @property (weak, nonatomic) IBOutlet UIView *figureToolsBar;
+@property (weak, nonatomic) IBOutlet UIView *controlView;
 @end
 
 @interface MainViewController ()<LayerControlDelegate>
+@property (nonatomic, strong) UIView *canvasBoard;
 @property (strong, nonatomic) CanvasView *canvasView;
 @property (nonatomic, strong) FigureView *figureView;
 @property (nonatomic, strong) PaletteViewController *paletteViewController;
@@ -65,6 +67,7 @@
 @property (nonatomic) CGFloat rotation;
 @property (nonatomic) CGFloat scale;
 @property (nonatomic) CGPoint translation;
+@property (nonatomic) CGAffineTransform counterRotation;
 
 @end
 
@@ -72,6 +75,7 @@
 
 - (void)start
 {
+    _counterRotation = CGAffineTransformIdentity;
     _scale = 1;
     _rotation = 0;
     _translation = CGPointZero;
@@ -82,8 +86,26 @@
 
     self.brushSlider.hidden = YES;
     _canvasDao = [CanvasDao sharedManager];
+
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChanged) name:UIDeviceOrientationDidChangeNotification
+//                                               object:nil];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    
+    CGAffineTransform transform = [coordinator targetTransform];
+    CGAffineTransform invertedRotation = CGAffineTransformInvert(transform);
+
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        _counterRotation = CGAffineTransformConcat(_counterRotation, invertedRotation);
+        _canvasBoard.transform = _counterRotation;
+        _canvasBoard.center = self.view.center;
+    
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+
+    }];
+}
 - (void)addMasktoColorView
 {
     CALayer *layer = [CALayer layer];
@@ -115,26 +137,35 @@
 
 - (void)addCanvasView
 {
-
     _canvas = [_canvasDao tempCanvs];
     if(!_canvas){
-        _canvas = [[Canvas alloc]initWithSize:self.view.bounds.size];
+        _canvas = [[Canvas alloc]initWithSize:CGSizeMake(1024, 768)];
         [_canvasDao create:_canvas];
     }
     CGSize screenSize = self.view.bounds.size;
+
+    _canvasBoard = [[UIView alloc]initWithFrame:(CGRect){CGPointZero, screenSize}];
     _canvasView = [[CanvasView alloc] initWithFrame:CGRectMake((screenSize.width-_canvas.canvasSize.width)/2, (screenSize.height - _canvas.canvasSize.height)/2, _canvas.canvasSize.width, _canvas.canvasSize.height)];
+    _canvasBoard.backgroundColor = [UIColor clearColor];
+    if(_canvas.canvasSize.width>screenSize.width){
+        CGFloat sscale = screenSize.width/_canvas.canvasSize.width;
+        _canvasView.transform = CGAffineTransformMakeScale(sscale, sscale);
+    }
+    
     _figureView = [[FigureView alloc] initWithFrame:self.view.frame];
     _figureView.backgroundColor =[UIColor clearColor];
     _canvasView.backgroundColor = _canvas.backgroundColor;
     _canvas.view = _canvasView;
-    [_canvasView.layer insertSublayer:_canvas.layer atIndex:0];
+    _canvas.layer = _canvasView.layer;
+
     
     [_canvas updateLayer];
 
     [self configureLayerBorad];
 
-    [self.view insertSubview:_canvasView atIndex:0];
-    [self.view insertSubview:_figureView atIndex:1];
+    [self.view insertSubview:_canvasBoard atIndex:0];
+    [_canvasBoard insertSubview:_canvasView atIndex:0];
+    [_controlView insertSubview:_figureView atIndex:0];
     _brush = _canvas.currentBrush;
     _width = _brush.width;
     _color = _brush.color;
@@ -179,7 +210,7 @@
 - (void)configLayerEditView
 {
     [_layerEditView.blendModeButton setTitle:[self blendModeNameForBlendMode:_currentControl.drawingLayer.blendMode] forState:UIControlStateNormal];
-    NSString *text = [NSString stringWithFormat:@"图层 %lu / %ld", [_layerControlArray indexOfObject:_currentControl] + 1, _layerControlArray.count];
+    NSString *text = [NSString stringWithFormat:@"图层 %u / %d", (unsigned)[_layerControlArray indexOfObject:_currentControl] + 1, (unsigned)_layerControlArray.count];
     _layerEditView.title.text = text;
     _layerEditView.alphaSlider.value = _currentControl.drawingLayer.alpha;
     if(_layerControlArray.count==1){
@@ -382,13 +413,14 @@
 }
 - (void)handleRotation:(UIRotationGestureRecognizer *)recognizer
 {
-    CGPoint location = [recognizer locationInView:self.view];
+    CGPoint location = [recognizer locationInView:_canvasView.superview];
     CGFloat rotation = recognizer.rotation - _rotation;
     CGPoint translation = CGPointMake(location.x-_canvasView.center.x, location.y - _canvasView.center.y);
     CGAffineTransform  trans = CGAffineTransformMakeTranslation(translation.x, translation.y);
     trans = CGAffineTransformRotate(trans,rotation);
     trans = CGAffineTransformTranslate(trans,-translation.x, -translation.y);
     _canvasView.transform =CGAffineTransformConcat(_canvasView.transform, trans);
+    
     _rotation = recognizer.rotation;
     if(recognizer.state == UIGestureRecognizerStateEnded){
         _rotation = 0;
@@ -398,13 +430,14 @@
 
 - (void)handlePinch:(UIPinchGestureRecognizer *)recognizer
 {
-    CGPoint location = [recognizer locationInView:self.view];
+    CGPoint location = [recognizer locationInView:_canvasView.superview];
     CGFloat scaling = recognizer.scale/_scale;
     CGPoint translation = CGPointMake(location.x-_canvasView.center.x, location.y - _canvasView.center.y);
     CGAffineTransform  trans = CGAffineTransformMakeTranslation(translation.x, translation.y);
     trans = CGAffineTransformScale(trans, scaling, scaling);
     trans = CGAffineTransformTranslate(trans,-translation.x, -translation.y);
      _canvasView.transform = CGAffineTransformConcat(_canvasView.transform, trans);
+
     _scale = recognizer.scale;
     if(recognizer.state == UIGestureRecognizerStateEnded){
          _scale = 1;
@@ -415,7 +448,7 @@
 {
     switch (recognizer.state) {
         case UIGestureRecognizerStateChanged:{
-            CGPoint tran = [recognizer translationInView:_figureView];
+            CGPoint tran = [recognizer translationInView:_canvasView.superview];
             CGAffineTransform translationTransform = CGAffineTransformMakeTranslation(tran.x - _translation.x, tran.y -_translation.y);
             
             _canvasView.transform =CGAffineTransformConcat(_canvasView.transform, translationTransform);
@@ -940,7 +973,10 @@
     return _canvas.backgroundColor;
 }
 
-
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+}
 @end
 
 

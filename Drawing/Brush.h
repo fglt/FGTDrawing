@@ -45,7 +45,6 @@ typedef NS_ENUM(NSInteger, FigureType) {
 - (void)clear;
 - (NSDictionary *)dictionary;
 - (void)drawWithFirstPoint:(CGPoint)point1 secondPoint:(CGPoint)point2 withFigureType:(FigureType)figureType;
-
 @end
 
 @interface ChineseBrush : Brush

@@ -37,8 +37,8 @@
     uint32_t i = [dict[@"color"] unsignedIntValue];
     canvas.backgroundColor = [UIColor colorWithUint32:i];
     canvas.currentBrush = [Brush BrushWithDictionary:dict[@"brush"]];
-    canvas.layer = [CALayer layer];
-    canvas.layer.frame = CGRectMake(0, 0, canvas.canvasSize.width, canvas.canvasSize.height);
+//    canvas.layer = [CALayer layer];
+//    canvas.layer.frame = CGRectMake(0, 0, canvas.canvasSize.width, canvas.canvasSize.height);
     NSArray *array = dict[@"layers"];
     NSMutableArray *layerArray = [NSMutableArray array];
     UIGraphicsBeginImageContextWithOptions(canvas.canvasSize, NO, 0.0);

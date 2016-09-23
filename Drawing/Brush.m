@@ -557,8 +557,6 @@ int const kBrushPixelStep = 3;
     UIBezierPath* bpath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(rect.size.width/2, rect.size.width/2) radius:self.width/2 startAngle:0 endAngle:M_PI*2 clockwise:YES];
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
     
-    CGFloat dash[]= {8,8};
-    [bpath setLineDash:dash count:2 phase:0];
     CGFloat alpha = CGColorGetAlpha(self.color.CGColor);
     UIColor *color = [UIColor colorWithWhite:0 alpha:alpha];
     [color set];
