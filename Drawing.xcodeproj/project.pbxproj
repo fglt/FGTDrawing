@@ -38,7 +38,6 @@
 		170E10C11D9029AB00F85EED /* UIImage+FEBoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A41D9029AB00F85EED /* UIImage+FEBoxBlur.m */; };
 		170E10C21D9029AB00F85EED /* UIImage+FGTDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A61D9029AB00F85EED /* UIImage+FGTDrawing.m */; };
 		170E10C31D9029AB00F85EED /* UIView+FGTDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 170E10A81D9029AB00F85EED /* UIView+FGTDrawing.m */; };
-		170E10C81D902B2300F85EED /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170E10C71D902B2300F85EED /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170E10C81D902B2300F85EED /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

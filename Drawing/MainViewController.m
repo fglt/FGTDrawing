@@ -67,7 +67,7 @@
 @property (nonatomic) CGFloat rotation;
 @property (nonatomic) CGFloat scale;
 @property (nonatomic) CGPoint translation;
-@property (nonatomic) CGAffineTransform counterRotation;
+//@property (nonatomic) CGAffineTransform counterRotation;
 
 @end
 
@@ -75,7 +75,7 @@
 
 - (void)start
 {
-    _counterRotation = CGAffineTransformIdentity;
+    //_counterRotation = CGAffineTransformIdentity;
     _scale = 1;
     _rotation = 0;
     _translation = CGPointZero;
@@ -98,8 +98,7 @@
     CGAffineTransform invertedRotation = CGAffineTransformInvert(transform);
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        _counterRotation = CGAffineTransformConcat(_counterRotation, invertedRotation);
-        _canvasBoard.transform = _counterRotation;
+        _canvasBoard.transform = CGAffineTransformConcat( _canvasBoard.transform, invertedRotation);
         _canvasBoard.center = self.view.center;
     
     } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
