@@ -86,9 +86,6 @@
 
     self.brushSlider.hidden = YES;
     _canvasDao = [CanvasDao sharedManager];
-
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChanged) name:UIDeviceOrientationDidChangeNotification
-//                                               object:nil];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -100,9 +97,10 @@
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
         _canvasBoard.transform = CGAffineTransformConcat( _canvasBoard.transform, invertedRotation);
         _canvasBoard.center = self.view.center;
+        _figureView.bezierPath = nil;
     
     } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-
+        
     }];
 }
 - (void)addMasktoColorView
@@ -154,7 +152,6 @@
     _figureView = [[FigureView alloc] initWithFrame:self.view.frame];
     _figureView.backgroundColor =[UIColor clearColor];
     _canvasView.backgroundColor = _canvas.backgroundColor;
-    _canvas.view = _canvasView;
     _canvas.layer = _canvasView.layer;
 
     
@@ -350,7 +347,7 @@
 - (void)handleFigureGesture:(UIPanGestureRecognizer*) recognizer
 {
     CGPoint point = [recognizer locationInView:_canvasView];
-    CGPoint locationInSuperView = [recognizer locationInView:self.view];
+    CGPoint locationInSuperView = [recognizer locationInView:recognizer.view];
     CGRect rect = _canvasView.bounds;
     rect = CGRectApplyAffineTransform(rect, _canvasView.transform);
        switch (recognizer.state) {

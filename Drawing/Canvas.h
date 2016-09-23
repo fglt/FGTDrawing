@@ -20,7 +20,6 @@
 @property (nonatomic, strong) UIColor *backgroundColor;
 @property (nonatomic, strong) DrawingLayer *currentDrawingLayer;
 @property (nonatomic, weak) CALayer *layer;
-@property (nonatomic, weak) UIView *view;
 - (void)clear;
 - (void)undo;
 - (void)redo;
