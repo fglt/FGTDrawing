@@ -37,13 +37,14 @@
 @property (weak, nonatomic) IBOutlet UIView *blendModeBoard;
 @property (weak, nonatomic) IBOutlet UIView *backColorViewBoard;
 @property (weak, nonatomic) IBOutlet UIView *figureToolsBar;
-@property (weak, nonatomic) IBOutlet UIView *controlView;
+@property (weak, nonatomic) IBOutlet FigureView *figureView;
+
 @end
 
 @interface MainViewController ()<LayerControlDelegate>
 @property (nonatomic, strong) UIView *canvasBoard;
 @property (strong, nonatomic) CanvasView *canvasView;
-@property (nonatomic, strong) FigureView *figureView;
+//@property (nonatomic, strong) FigureView *figureView;
 @property (nonatomic, strong) PaletteViewController *paletteViewController;
 @property (nonatomic, strong) BlendModeTableViewController *blendModeController;
 @property (nonatomic, strong) PaletteViewController *backGroundColorSetController;
@@ -68,7 +69,6 @@
 @property (nonatomic) CGFloat scale;
 @property (nonatomic) CGPoint translation;
 //@property (nonatomic) CGAffineTransform counterRotation;
-
 @end
 
 @implementation MainViewController
@@ -149,7 +149,7 @@
         _canvasView.transform = CGAffineTransformMakeScale(sscale, sscale);
     }
     
-    _figureView = [[FigureView alloc] initWithFrame:self.view.frame];
+//    _figureView = [[FigureView alloc] initWithFrame:self.view.bounds];
     _figureView.backgroundColor =[UIColor clearColor];
     _canvasView.backgroundColor = _canvas.backgroundColor;
     _canvas.layer = _canvasView.layer;
@@ -161,7 +161,7 @@
 
     [self.view insertSubview:_canvasBoard atIndex:0];
     [_canvasBoard insertSubview:_canvasView atIndex:0];
-    [_controlView insertSubview:_figureView atIndex:0];
+    //[self.view insertSubview:_figureView atIndex:1];
     _brush = _canvas.currentBrush;
     _width = _brush.width;
     _color = _brush.color;
