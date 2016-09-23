@@ -23,7 +23,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taR-Jr-tBR" customClass="FigureView">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </view>
                             <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="600" translatesAutoresizingMaskIntoConstraints="NO" id="Zcc-tw-YUl" userLabel="Brush radius alpha" customClass="BrushSlider">
                                 <subviews>
